@@ -1,0 +1,27 @@
+<!-- List books Page -->
+<!doctype html>
+<html>
+  <head>
+    <p><a href="/">Home</a></p>
+    <title>Welcome to <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=shopName%> Recipe List</h1>
+    <h2>Recipes available:</h2>
+    <table style="width:100%">
+      <% availableRecipes.forEach(function(recipe) { %>
+        <tr>
+        <td>Name:<%=recipe.recipe_name %></td>
+        <td>Typical values per:<%=recipe.values_per%></td>
+        <td>Unit of the typical value:<%=recipe.unit%></td>
+        <td>Carbs:<%=recipe.carbs%></td>
+        <td>Fat:<%=recipe.fat%></td>
+        <td>Protein:<%=recipe.protein%></td>
+        <td>Salt:<%=recipe.salt%></td>
+        <td>Sugar:<%=recipe.sugar%></td>
+      </tr>
+      <% }) %>
+    </table>
+    </body>
+</html>

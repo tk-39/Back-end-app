@@ -1,0 +1,17 @@
+<!-- Search Page -->
+<!doctype html>
+<html>
+  <head>
+    <p><a href="/">Home</a></p>
+    <title>Search <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=shopName%> Search to update a recipe in our database</h1>
+    <form action="/updatedrecipe" method="GET">
+      <p>Search for a recipe</p>
+      <input id="search-box" type="text" name="keyword" value="Default">
+      <input type="submit" value="Search" >
+    </form>
+  </body>
+</html>

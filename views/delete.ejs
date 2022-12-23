@@ -1,0 +1,17 @@
+<!-- Delete User Page -->
+<!doctype html>
+<html>
+  <head>
+    <p><a href="/">Home</a></p>
+    <title>Delete Account: <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1>Delete Account: <%=shopName%></h1>
+    <p>If a relevant recipe is in the database, you can remove it here</p>
+    <form method="POST" action="/deleteRecipe">
+        <P>Recipe name: <input id="username" type ="username" value =""/></P>
+        <input id ="submit" type ="submit" value="Delete" onclick ="myFunction('Are you sure');"/>
+    </form>
+  </body>
+</html>

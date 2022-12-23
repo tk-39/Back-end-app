@@ -1,0 +1,30 @@
+<!-- List books Page -->
+<!doctype html>
+<html>
+  <head>
+    <p><a href="/">Home</a></p>
+    <title>Welcome to <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=shopName%> Recipe List</h1>
+    <h2>Recipes available:</h2>
+    <tr>
+    <ul>
+      <% availableRecipes.forEach(function(recipe) { %>
+    <p> Update recipes by changing values for each relevant field: </p>
+    <form method="POST" action="/recipeUpdated">
+        <p>Recipe name: <input id="recipe" type="text" name="recipe" value="<%=recipe.recipe_name %>"/></p>
+        <p>Typical Values per: <input id="values_per" type="text" name="values" value="<%=recipe.values_per%>"/></p>
+        <p>Unit: <input id="unit" type="text" name="unit" value="<%=recipe.unit%>" /></p>
+        <p>Carbs: <input id="carbs" type="text" name="carbs" value="<%=recipe.carbs%>" /></p>
+        <p>Fat: <input id="fat" type="text" name="fat" value="<%=recipe.fat%>" /></p>
+        <p>Protein: <input id="protein" type="text" name="protein" value="<%=recipe.protein%>" /></p>
+        <p>Salt: <input id="salt" type="text" name="salt" value="<%=recipe.salt%>" /></p>
+        <p>Sugar: <input id="sugar" type="text" name="sugar" value="<%=recipe.sugar%>" /></p>
+        <input type="submit" value="Update recipe" />
+        <% }) %>
+    </form>
+    </tr>
+    </body>
+</html>
