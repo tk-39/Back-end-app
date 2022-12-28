@@ -19,6 +19,8 @@ Password is stored as a hashed password (hashedPassword) and is only displayed t
 
 Validation is used on each form for proper user handling, eg notEmpty(), isEmail(), isLength
 
+Lines 80-121 (main.js)
+
 R3B: A message is displayed if it was a success
 
 R4  Login page
@@ -30,10 +32,14 @@ R4B: if the user details are found in the database, users are redirected to "log
 R4C: If login is unsuccessful, users are redirected with a message saying whether their username or password is correct.
 
 Validation used on username and password forms
+ 
+Lines 124-170 (main.js)
 
 R5 Logout page
 
 logout.ejs, Users can easily logout with a message upon successful logout
+
+Lines 294-306 (main.js)
 
 R6 Add food page
 
@@ -45,7 +51,9 @@ R6B: Recipes are stored in the database
 
 R6C: Displays a message once user has submitted with a list of all values inputted by the user
 
-R7 serach food page
+Lines 203-227 (main.js)
+
+R7 search food page
 
 R7A: search.ejs, A form is displaiyed to users with only one field which is the name of the recipe. Displays a link to home page
 
@@ -53,11 +61,15 @@ R7B: Keyword is passed into database and returns results releveant to the keywor
 
 R7C: Users do not have to search for the complete word, the web app will return results relevant to the keyword used (see R7B)
 
+lines 63-77  (main.js)
+
 R8: Upate food page, only available to logged-in users
 
 R8A: update.ejs, A search food form with only one field which is the name of the recipe. Displays a link to the home page.
 
 R8B: If food is found, user is redirected to "updaterecipe.ejs" and data related to the food is returned in forms so that users can update each field. Once user has changed fields and selected "Update recipe", data is passed to the database and changed accordingly. 
+
+lines 230-272 (main.js)
 
 R9 List food page
 
@@ -65,14 +77,23 @@ R9A: Displays a list of all recipes in the database and a link to the homepage.
 
 R8B: Recipes are displayed in a tabular format, using custom table styling on lines 44-47 in "main.css"
 
+174-185 (main.js)
+
 R10: API
 
 Basic API displays all recipes and their respective fields in a JSON format. 
+
+lines 44-58 (main.js)
 
 R11
 
 Form validation has been used on most of the website, using methods like notEmpty(), isEmail(), isAlpha(), isLength, isFloat()
 
+Extra notes:
+
+I have attempted an implementation of the delete functionality, but I couldn't get it to work in time for the submission, so instead i've left it commented out so that it can still be seen on lines 274-291.
+
+I also included a "list user" page, which will list all registered users, including email and username
 
 ER Diagram: 
 ![image](https://user-images.githubusercontent.com/98770602/209377538-ce2873f1-13f2-432d-80c1-4221bd457b53.png)
